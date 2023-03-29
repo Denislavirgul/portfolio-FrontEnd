@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AcercadeComponent } from './acercade/acercade.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AcercadeComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
