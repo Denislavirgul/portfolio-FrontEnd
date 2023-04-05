@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  cursor: url(assets/cursor_gral2.png), auto;
+}
+
+#h2index{
+  color: red;
+}
+
+h3{
+  color: rgb(226, 43, 226);
+}
