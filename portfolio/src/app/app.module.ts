@@ -8,21 +8,24 @@ import { BannerComponent } from './banner/banner.component';
 import { AcercadeComponent } from './acercade/acercade.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { EducacionComponent } from './educacion/educacion.component';
+import { LoginComponent } from "./login/login.component";
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    BannerComponent,
-    AcercadeComponent,
-    ExperienciaComponent,
-    EducacionComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        BannerComponent,
+        AcercadeComponent,
+        ExperienciaComponent,
+        EducacionComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        LoginComponent
+    ]
 })
 export class AppModule { }
