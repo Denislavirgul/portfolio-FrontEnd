@@ -1,0 +1,19 @@
+// $primary:#b83390;
+$danger: #ff4136;
+$primary: #b6296f;
+
+
+
+@import "../node_modules/bootstrap/scss/functions";
+
+
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+* {
+  cursor: url(assets/cursor_gral2.png), auto;
+}
