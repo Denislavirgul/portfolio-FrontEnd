@@ -15,7 +15,6 @@ import { LoginComponent } from "./login/login.component";
     declarations: [
         AppComponent,
         HeaderComponent,
-        BannerComponent,
         AcercadeComponent,
         ExperienciaComponent,
         EducacionComponent,
@@ -25,7 +24,8 @@ import { LoginComponent } from "./login/login.component";
     imports: [
         BrowserModule,
         AppRoutingModule,
-        LoginComponent
+        LoginComponent,
+        BannerComponent
     ]
 })
 export class AppModule { }
