@@ -9,6 +9,9 @@ import { AcercadeComponent } from './componentes/acercade/acercade.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { LoginComponent } from "./componentes/login/login.component";
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { Login2Component } from './login2/login2.component';
 
 
 @NgModule({
@@ -18,6 +21,8 @@ import { LoginComponent } from "./componentes/login/login.component";
         AcercadeComponent,
         ExperienciaComponent,
         EducacionComponent,
+        HomeComponent,
+        Login2Component,
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -25,7 +30,8 @@ import { LoginComponent } from "./componentes/login/login.component";
         BrowserModule,
         AppRoutingModule,
         LoginComponent,
-        BannerComponent
+        BannerComponent,
+        HttpClientModule
     ]
 })
 export class AppModule { }
