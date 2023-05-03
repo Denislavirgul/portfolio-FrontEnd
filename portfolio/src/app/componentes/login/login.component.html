@@ -1,41 +1,60 @@
-<div class="row">
-	<div class="col">
-		<div ngbDropdown class="d-inline-block">
-			<button type="button" class="btn btn-outline-light btn-lg" id="dropdownForm1" ngbDropdownToggle>
-				Login
-			</button>
-			<div ngbDropdownMenu aria-labelledby="dropdownForm1">
-				<form class="px-4 py-3">
-					<div class="mb-3">
-						<label for="exampleDropdownFormEmail1">Email address</label>
-						<input
-							type="email"
-							class="form-control"
-							id="exampleDropdownFormEmail1"
-							placeholder="email@example.com"
-							autocomplete="username"
-						/>
-					</div>
-					<div class="mb-3">
-						<label for="exampleDropdownFormPassword1">Password</label>
-						<input
-							type="password"
-							class="form-control"
-							id="exampleDropdownFormPassword1"
-							placeholder="Password"
-							autocomplete="current-password"
-						/>
-					</div>
-					<div class="form-check">
-						<input type="checkbox" class="form-check-input" id="dropdownCheck" />
-						<label class="form-check-label" for="dropdownCheck"> Remember me </label>
-					</div>
-					<button type="submit" class="btn btn-primary">Sign in</button>
-				</form>
-				<div class="dropdown-divider"></div>
-				<button type="button" ngbDropdownItem>New around here? Sign up</button>
-				<button type="button" ngbDropdownItem>Forgot password?</button>
-			</div>
-		</div>
-	</div>
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid g-0">
+
+    <a class="navbar-brand" href="#">
+      <img src="assets/logoYP.png" alt="logo" width="130" height="">Ingresar
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+
+
+
+<!-- ---------------------------------------- -->
+
+<link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+<div class="demo-container body vh-100 ">
+  <div class="container ">
+    <div class="row ">
+      <div class="col-lg-6 col-12 mx-auto my-5">
+        <div class="text-center image-size-small position-relative my-3">
+        <img src="assets/chibiCortada.png" class="rounded-circle p-2 bg-white">
+        <div class="icon-camera">
+        <a href="" class="text-primary"><i class="lni lni-camera"></i></a>
+        </div>
+        </div>
+        <div class="p-5 bg-white rounded shadow-lg">
+          <h3 class="mb-2 text-center pt-5">Login</h3>
+          <p class="text-center lead">Por favor, ingresar usuario y contraseña.</p>
+
+
+          <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+            <label class="font-500" for="nombreUsuario">Usuario</label>
+            <input name="nombreUsuario" id="nombreUsuario" class="form-control form-control-lg mb-3"
+                    type="email" [(ngModel)]="nombreUsuario" required>
+
+             <label class="font-500" for="password">Password</label>
+            <input name="password" id="password" class="form-control form-control-lg"
+                   type="password" [(ngModel)]="password" required>
+
+            <p class="m-0 py-4"><a href="" class="text-muted">¿Olvidaste la contraseña?</a></p>
+
+            <button class="btn btn-primary btn-lg w-100 shadow-lg">Login</button>
+          </form>
+
+
+
+         <div class="text-center pt-4">
+          <p class="m-0">¿No tienes una cuenta? <a href="" class="text-dark font-weight-bold">Registrarse</a></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

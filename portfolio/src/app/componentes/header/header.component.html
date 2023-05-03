@@ -36,20 +36,48 @@
             <img class="d-inline-block align-text-top m-2" src="assets/iconoLinked2.png" alt="linkedicono" height="32">
            </a>
         </li>
+
         <li class="nav-item mx-2">
-          <div class="" data-bs-theme="light">
-            <app-login></app-login>
-          </div>
+          <button type="button" class="btn btn-outline-light btn-lg" (click)="login()" *ngIf="!isLogged"
+          id="dropdownForm1" ngbDropdownToggle>
+            Ingreso
+          </button>
         </li>
         <li class="nav-item mx-2">
-          <button type="button" class="btn btn-outline-light btn-lg" (click)="login2()" id="dropdownForm1" ngbDropdownToggle>
-            Login2
+          <button type="button" class="btn btn-outline-light btn-lg" (click)="onLogOut()" *ngIf="isLogged"
+          id="dropdownForm1" ngbDropdownToggle>
+            Cerrar Sesión
           </button>
-
         </li>
 
       </ul>
-       <!-- <a class="mx-3 mb-3" href="https://www.linkedin.com/in/denise-bustos-664840200/">
+
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<!-- <li class="nav-item mx-2">
+          <div class="" data-bs-theme="light">
+            <app-login3></app-login3>
+          </div>
+        </li> -->
+        <!-- <li class="nav-item mx-2">
+          <button type="button" class="btn btn-outline-light btn-lg" (click)="login2()" id="dropdownForm1" ngbDropdownToggle>
+            Login2
+          </button>
+        </li> -->
+
+
+
+
+
+ <!-- <a class="mx-3 mb-3" href="https://www.linkedin.com/in/denise-bustos-664840200/">
         <img src="assets/iconoLinked2.png" alt="" height="32">
        </a> -->
 
@@ -63,11 +91,3 @@
       <!-- <form class="d-flex" role="search">
         <button type="submit" class="btn btn-outline-light btn-lg mx-3" >Login</button>
       </form> -->
-
-    </div>
-  </div>
-</nav>
-
-
-
-
