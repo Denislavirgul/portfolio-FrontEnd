@@ -1,6 +1,67 @@
 
 <div class="container-fluid g-0">
-  <h2 class="text-center m-5 p-3 text-bg-primary">Experiencia</h2>
+  <h2 class="text-center m-5 p-3 text-bg-primary"> Experiencia</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4 text-center">
+      <button type="button" class="btn btn-outline-primary btn-lg mx-2 p-3" routerLink="/nuevaexp" *ngIf="isLogged"><i class="bi bi-file-earmark-plus-fill"></i> Nuevo</button>
+      <!-- <button type="button" class="btn btn-outline-primary mx-2 "><i class="bi bi-pencil-fill"></i> Editar</button>
+      <button type="button" class="btn btn-outline-primary mx-2 "><i class="bi bi-trash3"></i>Borrar</button> -->
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-4">
+    <div class="col-12 col-md-6 col-lg-4 text-center">
+      <button type="button" class="btn btn-primary btn-lg m-2 p-3" routerLink="/nuevaexp" *ngIf="isLogged">
+        <i class="bi bi-file-earmark-plus-fill"></i>
+        Nueva Experiencia</button>
+    </div>
+  </div>
+
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11 my-3 w-75 mx-auto">
+    <table class="table table-hover">
+      <tbody>
+        <tr *ngFor="let Experiencia of expe" class="w-75">
+          <td class="h3 fw-normal">{{Experiencia.nombreE}}</td>
+          <td>{{Experiencia.descripcionE}}</td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-outline-primary" routerLink="/editexp/{{Experiencia.id}}">
+              <i class="bi bi-pencil-fill" ></i> Editar
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-outline-primary" (click)="delete(Experiencia.id)">
+              <i class="bi bi-trash3" ></i> Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div *ngFor="let Experiencia of expe" class="row g-0 my-5 ">
+    <div class="col-10 col-sm-8 col-md-4 text-center my-5">
+      <img class="w-25" src="assets/experiencia/logoempresa.jpg" alt="">
+    </div>
+    <div  class="col-6 col-md-5 mx-4">
+      <h2 class="display-5 mb-4">{{Experiencia.nombreE}}</h2>
+      <p class="h4 fw-light">(years)</p>
+      <p class="h4 fw-normal">{{Experiencia.descripcionE}}</p>
+    </div>
+    <div *ngIf="isLogged" class="col-3 col-md-2 ">
+      <button type="button" class="btn btn-outline-primary mx-2"
+        routerLink="/editexp/{{Experiencia.id}}">
+        <i class="bi bi-pencil-fill"></i> Editar
+      </button>
+      <button type="button" class="btn btn-outline-primary mx-2"
+        (click)="delete(Experiencia.id)">
+        <i class="bi bi-trash3"></i>Borrar
+      </button>
+    </div>
+  </div>
 
   <div class="row g-0 my-4 align-items-center">
     <div class="col-2 col-md-4 text-center my-5">
@@ -25,6 +86,7 @@
         Ernesto Perez Cuesta 4-155. Prácticas Profesionales</p>
     </div>
   </div>
+
 
 
 </div>
