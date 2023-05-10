@@ -1,0 +1,105 @@
+<div id="hs" class="container-fluid g-0">
+  <h2 class="text-center m-5 p-3 text-bg-primary"> Hard & Soft Skills</h2>
+
+  <div class="text-center">
+    <button type="button" routerLink="/newskill" class="btn btn-outline-primary btn-lg mx-2 p-3" *ngIf="isLogged">
+      Nueva Skill
+    </button>
+  </div>
+
+  <div class="row text-center my-4 justify-content-center">
+
+    <div class="col-5 col-md-4 col-lg-3 my-4 px-2" *ngFor="let skill of skill">
+      <circle-progress
+        [percent]="(skill.porcentaje)"
+        [radius]="100"
+        [imageSrc]="''"
+        [title]="(skill.nombre)"
+        [titleColor]="'#009ac0'"
+        [showTitle]="true"
+        [showImage]="false"
+        [imageHeight]="75"
+        [imageWidth]="75"
+        [showUnits]="false"
+        [showSubtitle]="false"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#009ac0'"
+        [innerStrokeColor]="'#91d3e3'"
+        [animation]="true"
+        [animationDuration]="300"
+      ></circle-progress>
+
+      <div class="d-flex justify-content-center my-3">
+        <td *ngIf="isLogged">
+          <button class="btn btn-outline-primary mx-2" routerLink="/editskill/{{skill.id}}">
+            <i class="bi bi-pencil-fill" ></i>
+          </button>
+        </td>
+        <td *ngIf="isLogged">
+          <button class="btn btn-outline-primary mx-2" (click)="delete(skill.id)">
+            <i class="bi bi-trash3" ></i>
+          </button>
+        </td>
+      </div>
+
+
+    </div>
+
+
+<!-- -------------------------3-------------------- -->
+
+    <!-- <div class="col-6 col-md-4 my-4">
+      <circle-progress
+        [percent]="85"
+        [radius]="100"
+        [showUnits]="false"
+        [title]="'HTML'"
+        [titleColor]="'#009ac0'"
+        [titleFontSize]="'2em'"
+        [showSubtitle]="false"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#009ac0'"
+        [innerStrokeColor]="'#91d3e3'"
+        [animation]="true"
+        [animationDuration]="300"
+      ></circle-progress>
+    </div>
+
+    <div class="col-6 col-md-4 my-4">
+      <circle-progress
+        [percent]="85"
+        [radius]="100"
+        [imageSrc]="'../assets/chibiCortada.png'"
+        [showImage]="true"
+        [imageHeight]="75"
+        [imageWidth]="75"
+        [showUnits]="false"
+        [showSubtitle]="false"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#009ac0'"
+        [innerStrokeColor]="'#91d3e3'"
+        [animation]="true"
+        [animationDuration]="300"
+      ></circle-progress>
+    </div>
+
+    <div class="col-6 col-md-4 my-4">
+      <circle-progress
+        [percent]="85"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#009ac0'"
+        [innerStrokeColor]="'#91d3e3'"
+        [animation]="true"
+        [animationDuration]="300"
+      ></circle-progress>
+    </div> -->
+
+
+  </div>
+
+</div>

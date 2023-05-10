@@ -20,6 +20,10 @@ import { EditExperienciaComponent } from './componentes/experiencia/edit-experie
 import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
 import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { HysComponent } from './componentes/hys/hys.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NewSkillComponent } from './componentes/hys/new-skill.component';
+import { EditSkillComponent } from './componentes/hys/edit-skill.component';
 
 
 @NgModule({
@@ -35,7 +39,10 @@ import { FooterComponent } from './componentes/footer/footer.component';
         EditExperienciaComponent,
         NeweducacionComponent,
         EditeducacionComponent,
-        FooterComponent
+        FooterComponent,
+        HysComponent,
+        NewSkillComponent,
+        EditSkillComponent
     ],
     providers: [
       interceptorProvider
@@ -47,6 +54,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
         BannerComponent,
         HttpClientModule,
         FormsModule,
+        NgCircleProgressModule.forRoot({})
 
     ]
 })

@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid g-0">
+
+    <a class="navbar-brand" href="#">
+      <img src="assets/logoYP.png" alt="logo" width="130" height="">Denise Lucía Bustos
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row my-5">
+    <h2 class="display-5 my-4 text-center">Hard&Soft Skills</h2>
+
+    <div class="col-10 col-md-6 mx-auto">
+
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm" action="">
+        <div class="form-group my-4">
+          <label for="nombre" class="h4 fw-normal">Nueva Skill</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+        </div>
+        <div class="form-group my-4">
+          <label for="porcentaje" class="h4 fw-normal">Porcentaje</label>
+          <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+        </div>
+
+        <button class="btn btn-primary">Agregar Skill</button>
+      </form>
+    </div>
+  </div>
+</div>
