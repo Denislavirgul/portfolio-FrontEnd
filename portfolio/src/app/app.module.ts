@@ -24,6 +24,10 @@ import { HysComponent } from './componentes/hys/hys.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { NewSkillComponent } from './componentes/hys/new-skill.component';
 import { EditSkillComponent } from './componentes/hys/edit-skill.component';
+import { EditAcercadeComponent } from './componentes/acercade/edit-acercade.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -42,7 +46,8 @@ import { EditSkillComponent } from './componentes/hys/edit-skill.component';
         FooterComponent,
         HysComponent,
         NewSkillComponent,
-        EditSkillComponent
+        EditSkillComponent,
+        EditAcercadeComponent
     ],
     providers: [
       interceptorProvider
@@ -54,7 +59,9 @@ import { EditSkillComponent } from './componentes/hys/edit-skill.component';
         BannerComponent,
         HttpClientModule,
         FormsModule,
-        NgCircleProgressModule.forRoot({})
+        NgCircleProgressModule.forRoot({}),
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideStorage(() => getStorage())
 
     ]
 })

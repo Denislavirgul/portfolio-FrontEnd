@@ -1,7 +1,7 @@
-// export const environment = {
+export const environment = {
 
-//   production : false,
+  production : true,
 
-//   URL: 'http://localhost:8080/'
+  URL: 'https://backenddenise.onrender.com'
 
-// };
+};

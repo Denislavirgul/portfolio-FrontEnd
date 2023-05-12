@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid g-0">
+
+    <a class="navbar-brand" href="#">
+      <img src="assets/logoYP.png" alt="logo" width="130" height="">Denise Lucía Bustos
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+
+<div class="container-fluid" *ngIf="persona">
+  <div class="row my-5">
+    <h2 class="display-5 my-4 text-center">Editar Educación</h2>
+
+    <div class="col-10 col-md-8 mx-auto">
+
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group my-4">
+          <label for="nombre" class="h4 fw-normal">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+        </div>
+        <div class="form-group my-4">
+          <label for="apellido" class="h4 fw-normal">Apellido</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+        </div>
+        <div class="form-group my-4">
+          <label for="descripcion" class="h4 fw-normal">Descripcion</label>
+          <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
+        </div>
+        <div class="form-group my-4">
+          <label for="img" class="h4 fw-normal">Imágen</label>
+          <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)"
+          accept=".jpg, .jpeg, .png">
+        </div>
+        <div class="imagen my-4">
+          <img [src]="imageService.url" width="200px" alt="">
+        </div>
+
+        <button class="btn btn-primary">Editar</button>
+      </form>
+
+    </div>
+  </div>
+</div>
