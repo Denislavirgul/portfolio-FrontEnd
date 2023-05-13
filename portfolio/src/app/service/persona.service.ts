@@ -10,8 +10,9 @@ import { environment } from 'src/environments/environment';
 })
 
 export class PersonaService {
+  URL ='https://backenddenise.onrender.com/personas/';
   //URL = 'http://localhost:8080/personas/';
-  URL = environment.URL + 'personas/';
+  //URL = environment.URL + 'personas/';
 
 
   constructor(private httpClient: HttpClient) { }
@@ -32,9 +33,9 @@ export class PersonaService {
     return this.httpClient.put<any>(this.URL + `update/${id}`,Persona);
   }
 
-  // public delete(id:number): Observable<any>{
-  //   return this.httpClient.delete<any>(this.URL + `delete/${id}`);
-  // }
+  public delete(id:number): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  }
 
 
 }

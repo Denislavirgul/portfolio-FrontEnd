@@ -9,7 +9,8 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./acercade.component.css']
 })
 export class AcercadeComponent implements OnInit{
-  persona: persona = null;
+  persona: persona[]=[];
+  //persona: persona = null;
 
   constructor(public personaService: PersonaService,
     private tokenService:TokenService){}
@@ -25,12 +26,34 @@ export class AcercadeComponent implements OnInit{
     }
   }
 
+  // cargarPersona(){
+  //   this.personaService.detail(1).subscribe(
+  //     data=>{
+  //       this.persona = data
+  //     }
+  //   )
+  // }
+
   cargarPersona(){
-    this.personaService.detail(1).subscribe(
+    this.personaService.lista().subscribe(
       data=>{
         this.persona = data
       }
     )
   }
+
+  delete(id?:number){
+    if(id != undefined){
+      this.personaService.delete(id).subscribe(
+        data=>{
+          this.cargarPersona();
+        },err=>{
+          alert("No se pudo eliminar");
+        }
+      )
+    }
+  }
+
+
 
 }

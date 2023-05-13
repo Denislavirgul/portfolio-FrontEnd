@@ -28,6 +28,8 @@ import { EditAcercadeComponent } from './componentes/acercade/edit-acercade.comp
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewAcercadeComponent } from './componentes/acercade/newacercade.component';
+
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
         HysComponent,
         NewSkillComponent,
         EditSkillComponent,
-        EditAcercadeComponent
+        EditAcercadeComponent,
+        NewAcercadeComponent
     ],
     providers: [
       interceptorProvider
