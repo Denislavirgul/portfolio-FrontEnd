@@ -1,5 +1,6 @@
 
 export const environment = {
+
   firebase: {
     projectId: 'denisefrontend',
     appId: '1:533728532206:web:aaa817b1c21809858405ff',
@@ -10,7 +11,7 @@ export const environment = {
     messagingSenderId: '533728532206',
   },
 
-  //production : false,
+  production: false,
   //URL: 'http://localhost:8080/'
 
 };

@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthService {
   URL ='https://backenddenise.onrender.com/auth/';
+  //URL = 'http://localhost:8080/auth/'
   //URL = environment.URL + 'auth/';
 
 

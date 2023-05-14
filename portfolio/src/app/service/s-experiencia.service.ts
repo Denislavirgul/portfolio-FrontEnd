@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SExperienciaService {
   URL ='https://backenddenise.onrender.com/explab/';
-  //expURL = 'http://localhost:8080/explab/'
+  //URL = 'http://localhost:8080/explab/'
   //URL = environment.URL + 'explab/';
 
   constructor(private httpClient: HttpClient) { }

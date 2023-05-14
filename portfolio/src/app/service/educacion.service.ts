@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class EducacionService {
   URL ='https://backenddenise.onrender.com/educacion/';
+  //URL = 'http://localhost:8080/educacion/'
   //URL = environment.URL + 'educacion/';
 
   constructor(private httpClient : HttpClient) { }

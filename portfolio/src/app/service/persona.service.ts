@@ -1,3 +1,10 @@
+// import { HttpClient } from '@angular/common/http';
+// import { Observable } from 'rxjs';
+// import { Injectable } from '@angular/core';
+// import { environment } from 'src/environments/environment';
+// import { Persona } from '../model/person
+
+
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { persona } from '../model/persona.model';

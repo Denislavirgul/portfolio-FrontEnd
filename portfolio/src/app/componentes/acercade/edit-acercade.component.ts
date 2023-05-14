@@ -30,6 +30,8 @@ export class EditAcercadeComponent implements OnInit{
     )
   }
 
+
+
   onUpdate():void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.persona.img = this.imageService.url
@@ -43,6 +45,7 @@ export class EditAcercadeComponent implements OnInit{
     )
   }
 
+
   uploadImage($event:any){
     const id= this.activatedRouter.snapshot.params['id'];
     const name = "perfil_" + id;
@@ -50,3 +53,40 @@ export class EditAcercadeComponent implements OnInit{
   }
 
 }
+
+
+
+// onUpdate():void{
+  //   const id = this.activatedRouter.snapshot.params['id'];
+  //   if (this.persona) {
+  //     this.persona.img = this.imageService.url
+  //     this.personaService.update(id, this.persona).subscribe(
+  //       data=>{
+  //         this.router.navigate(['']);
+  //       },err =>{
+  //         alert("Error al modificar la persona");
+  //         this.router.navigate(['']);
+  //       }
+  //     )
+  //   }
+  // }
+
+
+// uploadImage($event:any){
+  //   const id= this.activatedRouter.snapshot.params['id'];
+  //   const name = "perfil_" + id;
+
+  //   this.imageService.uploadImage($event,name);
+  // ($event.target as HTMLInputElement).value = '';
+
+  //   const file = $event.target.files[0];
+  //   const reader = new FileReader();
+
+  //   reader.readAsDataURL(file);
+
+  //   reader.onload = () => {
+  //     this.imageService.url = reader.result as string;
+  //     this.persona.img = this.imageService.url;
+  //     this.imageService.uploadImage($event,name);
+  //   }
+  // }
