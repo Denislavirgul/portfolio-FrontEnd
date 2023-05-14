@@ -17,8 +17,8 @@ import { environment } from 'src/environments/environment';
 })
 
 export class PersonaService {
-  URL ='https://backenddenise.onrender.com/personas/';
-  //URL = 'http://localhost:8080/personas/';
+  //URL ='https://backenddenise.onrender.com/personas/';
+  URL = 'http://localhost:8080/personas/';
   //URL = environment.URL + 'personas/';
 
 

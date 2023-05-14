@@ -1,65 +1,58 @@
-<div id="educ" class="container-fluid g-0">
-  <h2 class="text-center m-5 p-3 text-bg-primary"> Educación</h2>
+<div id="proy" class="container-fluid g-0">
+  <h2 class="text-center m-5 p-3 text-bg-primary"> Proyectos</h2>
 
   <div class="row justify-content-center">
     <div class="col-12 col-md-6 col-lg-4 text-center">
-      <button type="button" class="btn btn-outline-primary btn-lg mx-2 p-3"
-      routerLink="/nuevaedu" *ngIf="isLogged">
-      <i class="bi bi-file-earmark-plus-fill"></i> Agregar Educación</button>
+      <button type="button" class="btn btn-outline-primary btn-lg mx-2 p-3" routerLink="/nuevoproy" *ngIf="isLogged">
+        <i class="bi bi-file-earmark-plus-fill"></i> Agregar Proyecto
+      </button>
     </div>
   </div>
 
-  <!-- <div class="row justify-content-center my-4">
-    <div class="col-12 col-md-6 col-lg-4 text-center">
-      <button type="button" class="btn btn-primary btn-lg m-2 p-3"
-      routerLink="/nuevaedu" *ngIf="isLogged">
-      <i class="bi bi-file-earmark-plus-fill mx-2"></i>Agregar Educación
-    </button>
-    </div>
-  </div> -->
+
 
 
   <div class="col lg 1"></div>
   <div class="col-lg-11 my-3 w-75 mx-auto">
     <table class="table table-hover">
       <tbody>
-        <tr *ngFor="let Educacion of educacion" class="w-75">
-          <td class="h3 fw-normal">{{Educacion.nombreE}}</td>
-          <td>{{Educacion.descripcionE}}</td>
-
+        <tr *ngFor="let Proyecto of proyecto" class="w-75">
+          <td class="h3 fw-normal">{{Proyecto.nombreP}}</td>
+          <td>{{Proyecto.descripcionP}}</td>
+          <td>{{Proyecto.linkP}}</td>
           <td *ngIf="isLogged">
-            <button class="btn btn-outline-primary" routerLink="/editedu/{{Educacion.id}}">
+            <button class="btn btn-outline-primary" routerLink="/editproy/{{Proyecto.id}}">
               <i class="bi bi-pencil-fill" ></i> Editar
             </button>
           </td>
           <td *ngIf="isLogged">
-            <button class="btn btn-outline-primary" (click)="delete(Educacion.id)">
+            <button class="btn btn-outline-primary" (click)="delete(Proyecto.id)">
               <i class="bi bi-trash3" ></i> Borrar
             </button>
           </td>
-
         </tr>
       </tbody>
     </table>
   </div>
 
 
-  <div *ngFor="let Educacion of educacion" class="row g-0 my-5 ">
+  <div *ngFor="let Proyecto of proyecto" class="row g-0 my-5 ">
     <div class="col-10 col-sm-8 col-md-4 text-center my-5">
       <img class="w-25" src="assets/experiencia/logoempresa.jpg" alt="">
     </div>
     <div  class="col-6 col-md-5 mx-4">
-      <h2 class="display-5 mb-4">{{Educacion.nombreE}}</h2>
+      <h2 class="display-5 mb-4">{{Proyecto.nombreP}}</h2>
       <!-- <p class="h4 fw-light">(years)</p> -->
-      <p class="h4 fw-normal">{{Educacion.descripcionE}}</p>
+      <p class="h4 fw-normal">{{Proyecto.descripcionP}}</p>
+      <p class="h4 fw-light">{{Proyecto.linkP}}</p>
     </div>
     <div *ngIf="isLogged" class="col-3 col-md-2 ">
       <button type="button" class="btn btn-outline-primary mx-2"
-        routerLink="/editedu/{{Educacion.id}}">
+        routerLink="/editproy/{{Proyecto.id}}">
         <i class="bi bi-pencil-fill"></i> Editar
       </button>
       <button type="button" class="btn btn-outline-primary mx-2"
-        (click)="delete(Educacion.id)">
+        (click)="delete(Proyecto.id)">
         <i class="bi bi-trash3"></i>Borrar
       </button>
     </div>

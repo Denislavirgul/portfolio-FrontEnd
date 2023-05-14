@@ -29,6 +29,9 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NewAcercadeComponent } from './componentes/acercade/newacercade.component';
+import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
+import { NewproyectoComponent } from './componentes/proyecto/newproyecto.component';
+import { EditproyectoComponent } from './componentes/proyecto/editproyecto.component';
 
 
 
@@ -50,7 +53,10 @@ import { NewAcercadeComponent } from './componentes/acercade/newacercade.compone
         NewSkillComponent,
         EditSkillComponent,
         EditAcercadeComponent,
-        NewAcercadeComponent
+        NewAcercadeComponent,
+        ProyectoComponent,
+        NewproyectoComponent,
+        EditproyectoComponent
     ],
     providers: [
       interceptorProvider
