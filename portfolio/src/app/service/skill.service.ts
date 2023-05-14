@@ -8,8 +8,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class SkillService {
-  //URL ='https://backenddenise.onrender.com/skill/';
-  URL = 'http://localhost:8080/skill/';
+  URL ='https://backenddenise.onrender.com/skill/';
+  //URL = 'http://localhost:8080/skill/';
   //URL = environment.URL + 'skill/';
 
   constructor(private httpClient:HttpClient) { }
