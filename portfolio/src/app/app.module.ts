@@ -22,6 +22,7 @@ import { EditeducacionComponent } from './componentes/educacion/editeducacion.co
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HysComponent } from './componentes/hys/hys.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+
 import { NewSkillComponent } from './componentes/hys/new-skill.component';
 import { EditSkillComponent } from './componentes/hys/edit-skill.component';
 import { EditAcercadeComponent } from './componentes/acercade/edit-acercade.component';
@@ -32,6 +33,8 @@ import { NewAcercadeComponent } from './componentes/acercade/newacercade.compone
 import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
 import { NewproyectoComponent } from './componentes/proyecto/newproyecto.component';
 import { EditproyectoComponent } from './componentes/proyecto/editproyecto.component';
+
+import { CircleProgressOptions } from 'ng-circle-progress/public-api';
 
 
 
@@ -56,7 +59,8 @@ import { EditproyectoComponent } from './componentes/proyecto/editproyecto.compo
         NewAcercadeComponent,
         ProyectoComponent,
         NewproyectoComponent,
-        EditproyectoComponent
+        EditproyectoComponent,
+
     ],
     providers: [
       interceptorProvider
@@ -71,6 +75,8 @@ import { EditproyectoComponent } from './componentes/proyecto/editproyecto.compo
         NgCircleProgressModule.forRoot({}),
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideStorage(() => getStorage())
+
+
 
     ]
 })
