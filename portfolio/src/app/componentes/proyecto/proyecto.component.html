@@ -1,0 +1,117 @@
+<div id="proy" class="container-fluid g-0">
+  <h2 class="text-center m-5 p-3 text-bg-primary"> Proyectos</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4 text-center">
+      <button type="button" class="btn btn-outline-primary btn-lg mx-2 p-3" routerLink="/nuevoproy" *ngIf="isLogged">
+        <i class="bi bi-file-earmark-plus-fill"></i> Agregar Proyecto
+      </button>
+    </div>
+  </div>
+
+
+
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11 my-3 w-75 mx-auto">
+    <table class="table table-hover">
+      <tbody>
+        <tr *ngFor="let Proyecto of proyecto" class="w-75">
+          <td class="h3 fw-normal">{{Proyecto.nombreP}}</td>
+          <td>{{Proyecto.descripcionP}}</td>
+
+          <!-- <td>{{Proyecto.linkP}}</td> -->
+          <td>
+          <a target="_blank" class="h5 fw-light link-offset-2 link-offset-3-hover
+      link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{Proyecto.linkP}}</a>
+          </td>
+
+          <td *ngIf="isLogged">
+            <button class="btn btn-outline-primary" routerLink="/editproy/{{Proyecto.id}}">
+              <i class="bi bi-pencil-fill" ></i> Editar
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-outline-primary" (click)="delete(Proyecto.id)">
+              <i class="bi bi-trash3" ></i> Borrar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div *ngFor="let Proyecto of proyecto" class="row g-0 my-5 ">
+    <div class="col-10 col-sm-8 col-md-4 text-center my-5">
+      <img class="w-25" src="assets/experiencia/logoempresa.jpg" alt="">
+    </div>
+    <div  class="col-6 col-md-5 mx-4">
+      <h2 class="display-5 mb-4">{{Proyecto.nombreP}}</h2>
+      <!-- <p class="h4 fw-light">(years)</p> -->
+      <p class="h4 fw-normal">{{Proyecto.descripcionP}}</p>
+      <!-- <p class="h4 fw-light">{{Proyecto.linkP}}</p> -->
+
+      <a target="_blank" class="h4 fw-light link-offset-2 link-offset-3-hover
+      link-underline link-underline-opacity-0 link-underline-opacity-75-hover">{{Proyecto.linkP}}</a>
+
+
+    </div>
+    <div *ngIf="isLogged" class="col-3 col-md-2 ">
+      <button type="button" class="btn btn-outline-primary mx-2"
+        routerLink="/editproy/{{Proyecto.id}}">
+        <i class="bi bi-pencil-fill"></i> Editar
+      </button>
+      <button type="button" class="btn btn-outline-primary mx-2"
+        (click)="delete(Proyecto.id)">
+        <i class="bi bi-trash3"></i>Borrar
+      </button>
+    </div>
+  </div>
+
+  <div class="row g-0 my-4 align-items-center">
+    <div class="col-2 col-md-4 text-center my-5">
+      <img class="w-25" src="assets/proy/p01.jpg" alt="">
+    </div>
+    <div class="col-8 col-md-6">
+      <h2 class="display-5 mb-4">Argentina Programa</h2>
+      <!-- <p class="h4 fw-light">Periodo Sep.17-Dic.17 2018</p> -->
+      <p class="h4 fw-normal">Portfolio. Tecnologías usadas: Angular, bootstrap, java, springboot,
+        clever cloud, render, firebase, node.js.
+      </p>
+      <a target="_blank" class="h4 fw-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+      href="https://denisefrontend.web.app">https://denisefrontend.web.app</a>
+    </div>
+  </div>
+
+  <div class="row g-0 my-4 align-items-center">
+    <div class="col-2 col-md-4 text-center my-5">
+      <img class="w-25" src="assets/proy/p02.png" alt="">
+    </div>
+    <div class="col-8 col-md-6">
+      <h2 class="display-5 mb-4">Mi media naranja</h2>
+      <!-- <p class="h4 fw-light">Periodo Sep17-Dic17 2018</p> -->
+      <p class="h4 fw-normal">Participé como ilustradora en el juego "Mi media naranja" en la Global Game Jamp</p>
+        <a target="_blank" class="h4 fw-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+      href="https://globalgamejam.org/2021/games/buscando-mi-media-naranja-9">https://globalgamejam.org/2021/games/buscando-mi-media-naranja-9</a>
+    </div>
+  </div>
+
+  <div class="row g-0 my-4 align-items-center">
+    <div class="col-2 col-md-4 text-center my-5">
+      <img class="w-25" src="assets/proy/p03.jpg" alt="">
+    </div>
+    <div class="col-8 col-md-6">
+      <h2 class="display-5 mb-4">Portfolio</h2>
+      <!-- <p class="h4 fw-light">Periodo Sep17-Dic17 2018</p> -->
+      <p class="h4 fw-normal">Participé como ilustradora en el juego "Mi media naranja" en la Global Game Jamp</p>
+        <a target="_blank" class="h4 fw-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+      href="https://denisdesignmultimedia.myportfolio.com/">https://denisdesignmultimedia.myportfolio.com/</a>
+    </div>
+  </div>
+
+  <div class="my-5"></div>
+
+
+
+</div>

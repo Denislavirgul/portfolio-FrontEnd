@@ -1,0 +1,93 @@
+
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid g-0">
+
+    <a class="navbar-brand" href="#">
+      <img src="assets/logoYP.png" alt="logo" width="130" height="">Denise Lucía Bustos
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-2">
+        <li class="nav-item mx-2">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#ami">Acerca de mi</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#expe">Experiencia</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#educ">Educación</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#hs">Hard&Soft Skills</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#proy">Proyectos</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="" target="_blank" href="https://www.linkedin.com/in/denise-bustos-664840200/">
+            <img class="d-inline-block align-text-top m-2" src="assets/iconoLinked2.png" alt="linkedicono" height="32">
+           </a>
+        </li>
+
+        <li class="nav-item mx-2">
+          <button type="button" class="btn btn-outline-light btn-lg" (click)="login()" *ngIf="!isLogged"
+          id="dropdownForm1" ngbDropdownToggle>
+            Ingreso
+          </button>
+        </li>
+        <li class="nav-item mx-2">
+          <button type="button" class="btn btn-outline-light btn-lg" (click)="onLogOut()" *ngIf="isLogged"
+          id="dropdownForm1" ngbDropdownToggle>
+            Cerrar Sesión
+          </button>
+        </li>
+
+      </ul>
+
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<!-- <li class="nav-item mx-2">
+          <div class="" data-bs-theme="light">
+            <app-login3></app-login3>
+          </div>
+        </li> -->
+        <!-- <li class="nav-item mx-2">
+          <button type="button" class="btn btn-outline-light btn-lg" (click)="login2()" id="dropdownForm1" ngbDropdownToggle>
+            Login2
+          </button>
+        </li> -->
+
+
+
+
+
+ <!-- <a class="mx-3 mb-3" href="https://www.linkedin.com/in/denise-bustos-664840200/">
+        <img src="assets/iconoLinked2.png" alt="" height="32">
+       </a> -->
+
+      <!-- -------LOGIN-------- -->
+
+      <!-- <div class="d-flex mx-4" data-bs-theme="light">
+        <app-login></app-login>
+      </div> -->
+
+
+      <!-- <form class="d-flex" role="search">
+        <button type="submit" class="btn btn-outline-light btn-lg mx-3" >Login</button>
+      </form> -->

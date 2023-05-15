@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid g-0">
+
+    <a class="navbar-brand" href="#">
+      <img src="assets/logoYP.png" alt="logo" width="130" height="">Denise Lucía Bustos
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+
+<div class="container-fluid" *ngIf="expLab">
+  <div class="row my-5">
+    <h2 class="display-5 my-4 text-center">Editar Experiencia</h2>
+    <div class="col-10 col-md-8 mx-auto">
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group my-4">
+          <label for="nombreE" class="h4 fw-normal">Nombre de la empresa</label>
+          <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
+        </div>
+        <div class="form-group my-4">
+          <label for="descripcionE" class="h4 fw-normal">Descripcion de la tarea</label>
+          <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
+        </div>
+        <button class="btn btn-primary">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>
