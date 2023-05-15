@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "denisefrontend"
-  }
+  },
+  "targets": {
+    "denisefrontend": {
+      "hosting": {
+        "nombre-del-proyecto": [
+          "identificador-del-sitio"
+        ],
+        "denisefrontend": [
+          "https://denisefrontend.web.app"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
